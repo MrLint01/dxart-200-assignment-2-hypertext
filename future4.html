@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Path 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="route single-route">
+    <section class="step future-base">
+      <img class="hold hold-f4-1" src="hold_6.png" alt="Future hold 10">
+      <img class="hold hold-f4-2" src="hold_3.png" alt="Future hold 11">
+      <img class="hold hold-f4-3" src="hold_7.png" alt="Future hold 12">
+      <img class="hold hold-f4-4" src="hold_5.png" alt="Future hold 13">
+      <img class="hold hold-f4-5" src="hold_9.png" alt="Future hold 14">
+      <img class="hold hold-f4-6" src="hold_10.png" alt="Future hold 15">
+      <img class="hold hold-f4-7" src="hold_1.png" alt="Future hold 16">
+      <img class="hold hold-f4-8" src="hold_2.png" alt="Future hold 17">
+      <img class="hold hold-f4-9" src="hold_4.png" alt="Future hold 18">
+
+      <div class="hold-popup popup-f4-1" data-hold="f4-1">After high school, I decide to enroll in culinary school to deepen my skills.</div>
+      <div class="hold-popup popup-f4-2" data-hold="f4-2">The hands-on training challenges me to master knife skills, plating, and kitchen efficiency.</div>
+      <div class="hold-popup popup-f4-3" data-hold="f4-3">I start learning the science behind flavors, textures, and cooking techniques from professional chefs—things I never considered during my weekend cooking sessions.</div>
+      <div class="hold-popup popup-f4-4" data-hold="f4-4">As a vegetarian, these types of dishes become my specialty, allowing me to experiment with plant-based cooking.</div>
+      <div class="hold-popup popup-f4-5" data-hold="f4-5">I collaborate with classmates on group projects, learning teamwork in a fast-paced environment, which was very stressful at first.</div>
+      <div class="hold-popup popup-f4-6" data-hold="f4-6">I start landing internships at local restaurants, gaining valuable real-world experience.</div>
+      <div class="hold-popup popup-f4-7" data-hold="f4-7">Over the next few years, I work at various restaurants to build my skills and experience.</div>
+      <div class="hold-popup popup-f4-8" data-hold="f4-8">I grow more confident managing a kitchen station and leading prep work.</div>
+      <div class="hold-popup popup-f4-9" data-hold="f4-9">All of a sudden, I see cooking very differently from how I did when I was just cooking at home.</div>
+
+      <a class="future-home" href="climb.html">Back</a>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const holds = document.querySelectorAll('.hold');
+      const popups = document.querySelectorAll('.hold-popup');
+
+      const hideAllPopups = () => {
+        popups.forEach(popup => popup.classList.remove('is-visible'));
+      };
+
+      holds.forEach(hold => {
+        hold.addEventListener('click', event => {
+          event.stopPropagation();
+          const match = hold.className.match(/hold-(f4-\d+)/);
+          if (!match) return;
+
+          const holdNumber = match[1];
+          const popup = document.querySelector(`.hold-popup[data-hold="${holdNumber}"]`);
+          const isAlreadyVisible = popup?.classList.contains('is-visible');
+
+          hideAllPopups();
+          if (popup && !isAlreadyVisible) {
+            popup.classList.add('is-visible');
+          }
+        });
+      });
+
+      popups.forEach(popup => popup.addEventListener('click', event => event.stopPropagation()));
+      document.addEventListener('click', () => hideAllPopups());
+    });
+  </script>
+</body>
+</html>

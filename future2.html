@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Path 2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="route single-route">
+    <section class="step future-base">
+      <img class="hold hold-f2-1" src="hold_2.png" alt="Future hold 10">
+      <img class="hold hold-f2-2" src="hold_7.png" alt="Future hold 11">
+      <img class="hold hold-f2-3" src="hold_4.png" alt="Future hold 12">
+      <img class="hold hold-f2-4" src="hold_8.png" alt="Future hold 13">
+      <img class="hold hold-f2-5" src="hold_5.png" alt="Future hold 14">
+      <img class="hold hold-f2-6" src="hold_3.png" alt="Future hold 15">
+      <img class="hold hold-f2-7" src="hold_1.png" alt="Future hold 16">
+      <img class="hold hold-f2-8" src="hold_2.png" alt="Future hold 17">
+      <img class="hold hold-f2-9" src="hold_10.png" alt="Future hold 18">
+
+      <div class="hold-popup popup-f2-1" data-hold="f2-1">After Nikkyu passed, I became more curious about cat health and wellbeing.</div>
+      <div class="hold-popup popup-f2-2" data-hold="f2-2">I started reading books and watching videos about veterinary medicine.</div>
+      <div class="hold-popup popup-f2-3" data-hold="f2-3">In high school, I volunteered at animal shelters and local clinics.</div>
+      <div class="hold-popup popup-f2-4" data-hold="f2-4">I discovered I had a real passion for caring for cats and helping animals heal.</div>
+      <div class="hold-popup popup-f2-5" data-hold="f2-5">I decided to pursue veterinary school with a focus on feline medicine.</div>
+      <div class="hold-popup popup-f2-6" data-hold="f2-6">I began preparing by studying biology, anatomy, and animal behavior.</div>
+      <div class="hold-popup popup-f2-7" data-hold="f2-7">Now, I am in vet school, learning about diseases, treatments, and surgery.</div>
+      <div class="hold-popup popup-f2-8" data-hold="f2-8">I am gaining hands-on experience through clinical rotations and internships.</div>
+      <div class="hold-popup popup-f2-9" data-hold="f2-9">Every step reminds me of Nikkyu and why I want to help cats live healthier lives.</div>
+
+      <a class="future-home" href="climb.html">Back</a>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const holds = document.querySelectorAll('.hold');
+      const popups = document.querySelectorAll('.hold-popup');
+
+      const hideAllPopups = () => {
+        popups.forEach(popup => popup.classList.remove('is-visible'));
+      };
+
+      holds.forEach(hold => {
+        hold.addEventListener('click', event => {
+          event.stopPropagation();
+          const match = hold.className.match(/hold-(f2-\d+)/);
+          if (!match) return;
+
+          const holdNumber = match[1];
+          const popup = document.querySelector(`.hold-popup[data-hold="${holdNumber}"]`);
+          const isAlreadyVisible = popup?.classList.contains('is-visible');
+
+          hideAllPopups();
+          if (popup && !isAlreadyVisible) {
+            popup.classList.add('is-visible');
+          }
+        });
+      });
+
+      popups.forEach(popup => popup.addEventListener('click', event => event.stopPropagation()));
+      document.addEventListener('click', () => hideAllPopups());
+    });
+  </script>
+</body>
+</html>

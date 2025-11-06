@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Path 5</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="route single-route future-five-route">
+    <section class="step future-base">
+      <img class="hold hold-f5-1" src="hold_1.png" alt="Future hold 10">
+      <img class="hold hold-f5-2" src="hold_2.png" alt="Future hold 11">
+      <img class="hold hold-f5-3" src="hold_3.png" alt="Future hold 12">
+      <img class="hold hold-f5-4" src="hold_4.png" alt="Future hold 13">
+      <img class="hold hold-f5-5" src="hold_5.png" alt="Future hold 14">
+      <img class="hold hold-f5-6" src="hold_10.png" alt="Future hold 15">
+      <img class="hold hold-f5-7" src="hold_3.png" alt="Future hold 16">
+      <img class="hold hold-f5-8" src="hold_5.png" alt="Future hold 17">
+      <img class="hold hold-f5-9" src="hold_7.png" alt="Future hold 18">
+
+      <div class="hold-popup popup-f5-1" data-hold="f5-1">After a few years, climbing becomes more than just a few-times-a-week activity, it becomes a daily routine.</div>
+      <div class="hold-popup popup-f5-2" data-hold="f5-2">I see myself going to the gym every day and taking training seriously.</div>
+      <div class="hold-popup popup-f5-3" data-hold="f5-3">I go to my first outdoor climbing session with my friends, bringing crashpads and other equipment I've never used before.</div>
+      <div class="hold-popup popup-f5-4" data-hold="f5-4">I soon try top roping for the first time. Although I'm nervous about the height, I slowly become more confident.</div>
+      <div class="hold-popup popup-f5-5" data-hold="f5-5">Some of my friends start inviting me to small local competitions, and I figure I might as well try. At first, I'm nervous and fall more than I finish, but I try to keep my mindset the same as a normal session.</div>
+      <div class="hold-popup popup-f5-6" data-hold="f5-6">I start sending harder problems, and some of the holds that used to feel impossible now feel easy, showing my progress in outdoor climbing.</div>
+      <div class="hold-popup popup-f5-7" data-hold="f5-7">I begin competing in local comps more often, sending some routes with ease, but qualifying for the finals still feels out of reach.</div>
+      <div class="hold-popup popup-f5-8" data-hold="f5-8">After a few seasons of training and climbing outdoors, I finally get my first time slot in qualifiers for the finals.</div>
+      <div class="hold-popup popup-f5-9" data-hold="f5-9">I didn't win, nor I didn't even place in the top three, but I see how far I've come. The climbs that once felt impossible now feel natural to me. I remember why I started climbing in the first place: because it's fun, challenging, and full of problem-solving, just like when I first began years ago.</div>
+
+      <a class="future-home" href="climb.html">Back</a>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const holds = document.querySelectorAll('.hold');
+      const popups = document.querySelectorAll('.hold-popup');
+
+      const hideAllPopups = () => {
+        popups.forEach(popup => popup.classList.remove('is-visible'));
+      };
+
+      holds.forEach(hold => {
+        hold.addEventListener('click', event => {
+          event.stopPropagation();
+          const match = hold.className.match(/hold-(f5-\d+)/);
+          if (!match) return;
+
+          const holdNumber = match[1];
+          const popup = document.querySelector(`.hold-popup[data-hold="${holdNumber}"]`);
+          const isAlreadyVisible = popup?.classList.contains('is-visible');
+
+          hideAllPopups();
+          if (popup && !isAlreadyVisible) {
+            popup.classList.add('is-visible');
+          }
+        });
+      });
+
+      popups.forEach(popup => popup.addEventListener('click', event => event.stopPropagation()));
+      document.addEventListener('click', () => hideAllPopups());
+    });
+  </script>
+</body>
+</html>

@@ -2,170 +2,80 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Climb of Futures</title>
+<title>Climb of Futures — Start</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: #f1f4ff;
+    color: #1f1f1f;
+  }
+  .launch-card {
+    text-align: center;
+    max-width: 720px;
+    padding: 3rem 3.5rem;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 25px 55px rgba(15, 22, 43, 0.12);
+  }
+  .launch-card h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .project-meta {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #7a7f97;
+  }
+  .launch-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 0 2.5rem;
+    color: #4b4f63;
+  }
+  .project-name {
+    letter-spacing: 0.06em;
+    margin-top: -0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .start-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.95rem 2.4rem;
+    border-radius: 999px;
+    border: none;
+    background: rgba(91, 123, 255, 0.85);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .start-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(91, 123, 255, 0.35);
+  }
+</style>
 </head>
 <body>
-  <div class="route">
-    <section class="step base">
-      <img class="hold hold-1" src="hold_1.png" alt="Climbing hold 1">
-      <img class="hold hold-2" src="hold_2.png" alt="Climbing hold 2">
-      <img class="hold hold-3" src="hold_3.png" alt="Climbing hold 3">
-      <img class="hold hold-4" src="hold_4.png" alt="Climbing hold 4">
-      <img class="hold hold-5" src="hold_5.png" alt="Climbing hold 5">
-      <img class="hold hold-6" src="hold_6.png" alt="Climbing hold 6">
-      <img class="hold hold-7" src="hold_7.png" alt="Climbing hold 7">
-      <img class="hold hold-8" src="hold_8.png" alt="Climbing hold 8">
-      <a class="hold hold-9 hold-link" href="future1.html">
-        <img src="hold_9.png" alt="Follow this hold into imagined futures">
-      </a>
-      <div class="hold-popup popup-1" data-hold="1">My name is Lintaro Ishizuki. I was born on April 15, 2004.</div>
-      <div class="hold-popup popup-2" data-hold="2">I live with my parents and two younger sisters.</div>
-      <div class="hold-popup popup-3" data-hold="3">My parents moved from Japan to the United States in 1999 for work.</div>
-      <div class="hold-popup popup-4" data-hold="4">And we have one cat named "Hamie".</div>
-      <div class="hold-popup popup-5" data-hold="5">My family is full of musicians-my sisters play flute, saxophone, piano, and oboe; my mom sings and my dad plays the drums.</div>
-      <div class="hold-popup popup-6" data-hold="6">I started playing piano during elemntary school and still sit down to practice whenever I need to reset.</div>
-      <div class="hold-image hold-image-6" data-hold="6">
-        <img src="img_6.png" alt="Piano resting near my study space">
-      </div>
-      <div class="hold-popup popup-7" data-hold="7">I still play piano and take lessons whenever I can.</div>
-      <div class="hold-popup popup-8" data-hold="8">I love making music as well. I see myself crafting tracks in DAWs and sharing them with friends.</div>
-      <div class="hold-image hold-image-8" data-hold="8">
-        <img src="img_8.png" alt="Producing music in my DAW setup">
-      </div>
-    </section>
-
-    <section class="step mid">
-      <img class="hold hold-10" src="hold_10.png" alt="Climbing hold 10">
-      <img class="hold hold-11" src="hold_1.png" alt="Climbing hold 11">
-      <img class="hold hold-12" src="hold_2.png" alt="Climbing hold 12">
-      <img class="hold hold-13" src="hold_3.png" alt="Climbing hold 13">
-      <img class="hold hold-14" src="hold_4.png" alt="Climbing hold 14">
-      <img class="hold hold-15" src="hold_5.png" alt="Climbing hold 15">
-      <img class="hold hold-16" src="hold_6.png" alt="Climbing hold 16">
-      <img class="hold hold-17" src="hold_7.png" alt="Climbing hold 17">
-      <img class="hold hold-18" src="hold_8.png" alt="Climbing hold 18">
-      <div class="hold-popup popup-10" data-hold="10">Around the end of fourth grade we adopted two tabby cats named Hamie and Nikkyu.</div>
-      <div class="hold-popup popup-11" data-hold="11">They're brothers, always wrestling eachother.</div>
-      <div class="hold-popup popup-12" data-hold="12">Hamie loves going on top of our belly.</div>
-      <div class="hold-popup popup-13" data-hold="13">Nikkyu loves going on our laps.</div>
-      <div class="hold-popup popup-14" data-hold="14">These are some of their favorite toys.</div>
-      <div class="hold-popup popup-15" data-hold="15">However, Nikkyu passed away in September 2025 at age thirteen, and the house has felt a little quieter since.</div>
-      <div class="hold-popup popup-16" data-hold="16">We still miss him, and Hamie wanders the hallway like he’s waiting for his brother to turn the corner.</div>
-      <div class="hold-popup popup-17" data-hold="17">Though, it still feels like he is with us.</div>
-      <div class="hold-popup popup-18" data-hold="18">...</div>
-    </section>
-
-    <section class="step summit">
-      <img class="hold hold-19" src="hold_9.png" alt="Climbing hold 19">
-      <img class="hold hold-20" src="hold_10.png" alt="Climbing hold 20">
-      <img class="hold hold-21" src="hold_1.png" alt="Climbing hold 21">
-      <img class="hold hold-22" src="hold_2.png" alt="Climbing hold 22">
-      <img class="hold hold-23" src="hold_3.png" alt="Climbing hold 23">
-      <img class="hold hold-24" src="hold_4.png" alt="Climbing hold 24">
-      <img class="hold hold-25" src="hold_5.png" alt="Climbing hold 25">
-      <img class="hold hold-26" src="hold_6.png" alt="Climbing hold 26">
-      <div class="hold-popup popup-19" data-hold="19">My dad is a software engineer, so computers were always nearby when I was growing up.</div>
-      <div class="hold-popup popup-20" data-hold="20">I was curious early on, but middle school is when I started diving in on my own.</div>
-      <div class="hold-popup popup-21" data-hold="21">My earliest projects were in Scratch—platformers, puzzle games, little fighting games.</div>
-      <div class="hold-popup popup-22" data-hold="22">Building those projects just for fun made me realize how much I enjoy problem solving and making ideas interactive.</div>
-      <div class="hold-popup popup-23" data-hold="23">That curiosity carried me into computer science classes through Running Start and North Seattle College while I was still in high school.</div>
-      <div class="hold-popup popup-24" data-hold="24">Those early college courses challenged me, but they made me decide to pursue computer science as my major.</div>
-      <div class="hold-popup popup-25" data-hold="25">Now I'm at the University of Washington studying computer science and still chasing the same curiosity that started in middle school.</div>
-      <div class="hold-popup popup-26" data-hold="26"></div>
-    </section>
-
-    <section class="step crux">
-      <img class="hold hold-27" src="hold_7.png" alt="Climbing hold 27">
-      <img class="hold hold-28" src="hold_8.png" alt="Climbing hold 28">
-      <img class="hold hold-29" src="hold_9.png" alt="Climbing hold 29">
-      <img class="hold hold-30" src="hold_10.png" alt="Climbing hold 30">
-      <img class="hold hold-31" src="hold_1.png" alt="Climbing hold 31">
-      <img class="hold hold-32" src="hold_2.png" alt="Climbing hold 32">
-      <img class="hold hold-33" src="hold_3.png" alt="Climbing hold 33">
-      <img class="hold hold-34" src="hold_4.png" alt="Climbing hold 34">
-      <div class="hold-popup popup-27" data-hold="27">A sophomore-year high school culinary class completely shifted how I think about food and creativity.</div>
-      <div class="hold-popup popup-28" data-hold="28">Before that class I had barely cooked or baked anything, so I walked into the kitchen nervous and curious.</div>
-      <div class="hold-popup popup-29" data-hold="29">Week by week, cooking stopped feeling intimidating and started becoming a daily routine I genuinely enjoyed.</div>
-      <div class="hold-popup popup-30" data-hold="30">As a vegetarian, learning to cook also meant I could take pressure off my parents and make meals that fit me.</div>
-      <div class="hold-popup popup-31" data-hold="31">Since then I've been exploring everything from Japanese comfort food to Italian pastas and weekend pastry experiments.</div>
-      <div class="hold-popup popup-32" data-hold="32">I love testing new recipes and sharing my food with my family.</div>
-      <div class="hold-popup popup-33" data-hold="33">Here are some of my favorite creations.</div>
-      <div class="hold-popup popup-34" data-hold="34">...</div>
-    </section>
-
-    <section class="step horizon">
-      <img class="hold hold-35" src="hold_5.png" alt="Climbing hold 35">
-      <img class="hold hold-36" src="hold_6.png" alt="Climbing hold 36">
-      <img class="hold hold-37" src="hold_7.png" alt="Climbing hold 37">
-      <img class="hold hold-38" src="hold_8.png" alt="Climbing hold 38">
-      <img class="hold hold-39" src="hold_9.png" alt="Climbing hold 39">
-      <img class="hold hold-40" src="hold_10.png" alt="Climbing hold 40">
-      <img class="hold hold-41" src="hold_1.png" alt="Climbing hold 41">
-      <img class="hold hold-42" src="hold_2.png" alt="Climbing hold 42">
-      <div class="hold-popup popup-35" data-hold="35">A friend's older brother invited me to the climbing gym near the end of junior year, and I decided to give it a shot.</div>
-      <div class="hold-popup popup-36" data-hold="36">I hadn't touched a climbing wall since an elementary school birthday party, so I showed up nervous and unsure.</div>
-      <div class="hold-popup popup-37" data-hold="37">One session in and I was hooked.</div>
-      <div class="hold-popup popup-38" data-hold="38">The mix of puzzles, color-coded routes, and the rhythm of moving felt like playing a game in real life.</div>
-      <div class="hold-popup popup-39" data-hold="39">I remember staring at the hardest routes and wondering how anyone could possibly reach the top.</div>
-      <div class="hold-popup popup-40" data-hold="40">But today, I see myself topping some of these climbs I thought was impossible.</div>
-      <div class="hold-popup popup-41" data-hold="41">Climbing has turned into a routine with the same friends who started alongside me-we trade beta, encourage each other, and celebrate every send.</div>
-      <div class="hold-popup popup-42" data-hold="42"></div>
-    </section>
-  </div>
-
-  <script>
-    window.addEventListener('load', () => {
-      const route = document.querySelector('.route');
-      if (route) {
-        route.scrollTo({ top: route.scrollHeight, behavior: 'auto' });
-      }
-
-      const holds = document.querySelectorAll('.hold');
-      const popups = document.querySelectorAll('.hold-popup');
-      const images = document.querySelectorAll('.hold-image');
-
-      const hideAllPopups = () => {
-        popups.forEach(popup => popup.classList.remove('is-visible'));
-        images.forEach(image => image.classList.remove('is-visible'));
-      };
-
-      holds.forEach(hold => {
-        hold.addEventListener('click', event => {
-          if (hold.classList.contains('hold-link')) {
-            hideAllPopups();
-            return;
-          }
-
-          event.stopPropagation();
-          const holdNumber = hold.className.match(/hold-(\d+)/)?.[1];
-          if (!holdNumber) return;
-
-          const popup = document.querySelector(`.hold-popup[data-hold="${holdNumber}"]`);
-          const image = document.querySelector(`.hold-image[data-hold="${holdNumber}"]`);
-
-          const isPopupVisible = popup ? popup.classList.contains('is-visible') : false;
-          const isImageVisible = image ? image.classList.contains('is-visible') : false;
-          const shouldShow = !isPopupVisible && !isImageVisible;
-
-          hideAllPopups();
-          if (shouldShow) {
-            if (popup) popup.classList.add('is-visible');
-            if (image) image.classList.add('is-visible');
-          }
-        });
-      });
-
-      popups.forEach(popup => {
-        popup.addEventListener('click', event => event.stopPropagation());
-      });
-
-      images.forEach(image => {
-        image.addEventListener('click', event => event.stopPropagation());
-      });
-
-      document.addEventListener('click', () => hideAllPopups());
-    });
-  </script>
+  <main class="launch-card">
+    <header>
+      <p class="project-meta">[DXART 200] Assignment #2: Hypertext (AU25)</p>
+      <h1>Climb of Futures</h1>
+      <p class="project-meta project-name">Lintaro Ishizuki</p>
+    </header>
+    <p>Explore snapshots from my life and a few futures I'm curious about. Start at the base whenever you're ready. The main wall has all true stories; click the climbing holds to reveal each moment. The final hold in each colored section opens an alternate path to a different future.</p>
+    <a class="start-link" href="climb.html">Start the Climb</a>
+  </main>
 </body>
 </html>

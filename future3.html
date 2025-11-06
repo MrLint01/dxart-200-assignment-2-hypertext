@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Path 3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="route single-route">
+    <section class="step future-base">
+      <img class="hold hold-f3-1" src="hold_9.png" alt="Future hold 10">
+      <img class="hold hold-f3-2" src="hold_3.png" alt="Future hold 11">
+      <img class="hold hold-f3-3" src="hold_4.png" alt="Future hold 12">
+      <img class="hold hold-f3-4" src="hold_7.png" alt="Future hold 13">
+      <img class="hold hold-f3-5" src="hold_2.png" alt="Future hold 14">
+      <img class="hold hold-f3-6" src="hold_1.png" alt="Future hold 15">
+      <img class="hold hold-f3-7" src="hold_3.png" alt="Future hold 16">
+      <img class="hold hold-f3-8" src="hold_5.png" alt="Future hold 17">
+      <img class="hold hold-f3-9" src="hold_6.png" alt="Future hold 18">
+
+      <div class="hold-popup popup-f3-1" data-hold="f3-1">I start building small apps and websites, learning by doing.</div>
+      <div class="hold-popup popup-f3-2" data-hold="f3-2">I also create games for fun and upload them to GitHub as projects.</div>
+      <div class="hold-popup popup-f3-3" data-hold="f3-3">I begin building my profile and sharing my work online.</div>
+      <div class="hold-popup popup-f3-4" data-hold="f3-4">I start applying for internships but struggle because the market is competitive.</div>
+      <div class="hold-popup popup-f3-5" data-hold="f3-5">I keep grinding LeetCode during my free time to prepare for job interviews.</div>
+      <div class="hold-popup popup-f3-6" data-hold="f3-6">Slowly, I start to get interview invites. And finally, I land my first internship.</div>
+      <div class="hold-popup popup-f3-7" data-hold="f3-7">Over the next few years, I keep landing different internships to gain work experience.</div>
+      <div class="hold-popup popup-f3-8" data-hold="f3-8">With this experience, I start my own start-up, becoming my own boss.</div>
+      <div class="hold-popup popup-f3-9" data-hold="f3-9">From here, I build a company that combines my passion for coding and creativity—just like when I started with Scratch, making fun games for the first time.</div>
+
+      <a class="future-home" href="climb.html">Back</a>
+    </section>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const holds = document.querySelectorAll('.hold');
+      const popups = document.querySelectorAll('.hold-popup');
+
+      const hideAllPopups = () => {
+        popups.forEach(popup => popup.classList.remove('is-visible'));
+      };
+
+      holds.forEach(hold => {
+        hold.addEventListener('click', event => {
+          event.stopPropagation();
+          const match = hold.className.match(/hold-(f3-\d+)/);
+          if (!match) return;
+
+          const holdNumber = match[1];
+          const popup = document.querySelector(`.hold-popup[data-hold="${holdNumber}"]`);
+          const isAlreadyVisible = popup?.classList.contains('is-visible');
+
+          hideAllPopups();
+          if (popup && !isAlreadyVisible) {
+            popup.classList.add('is-visible');
+          }
+        });
+      });
+
+      popups.forEach(popup => popup.addEventListener('click', event => event.stopPropagation()));
+      document.addEventListener('click', () => hideAllPopups());
+    });
+  </script>
+</body>
+</html>
